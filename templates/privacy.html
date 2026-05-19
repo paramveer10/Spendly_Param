@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}Privacy Policy — Spendly{% endblock %}
+
+{% block content %}
+
+<section class="cta-section" style="padding-bottom: 2rem;">
+    <div class="cta-inner">
+        <div class="hero-badge">Legal</div>
+        <h1 class="cta-title">Privacy Policy</h1>
+        <p class="cta-body">Last updated: May 2026</p>
+    </div>
+</section>
+
+<section style="max-width: 720px; margin: 0 auto; padding: 0 2rem 6rem;">
+
+    <div style="border-top: 1px solid var(--border); padding-top: 3rem; display: flex; flex-direction: column; gap: 2.5rem;">
+
+        <div>
+            <h2 style="font-family: var(--font-display); font-size: 1.4rem; color: var(--ink); margin-bottom: 0.75rem;">1. Data We Collect</h2>
+            <p style="color: var(--ink-muted); line-height: 1.8; font-size: 0.95rem; margin-bottom: 0.75rem;">When you use Spendly, we collect the following information:</p>
+            <ul style="color: var(--ink-muted); line-height: 1.8; font-size: 0.95rem; padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.3rem;">
+                <li><strong style="color: var(--ink-soft);">Account information</strong> — your name, email address, and hashed password when you register.</li>
+                <li><strong style="color: var(--ink-soft);">Expense data</strong> — amounts, categories, dates, and descriptions you enter manually.</li>
+                <li><strong style="color: var(--ink-soft);">Usage data</strong> — pages visited and actions taken within the app, used to improve the service.</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2 style="font-family: var(--font-display); font-size: 1.4rem; color: var(--ink); margin-bottom: 0.75rem;">2. How We Use Your Data</h2>
+            <p style="color: var(--ink-muted); line-height: 1.8; font-size: 0.95rem; margin-bottom: 0.75rem;">We use the data we collect solely to:</p>
+            <ul style="color: var(--ink-muted); line-height: 1.8; font-size: 0.95rem; padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.3rem;">
+                <li>Provide and maintain your personal expense tracking experience.</li>
+                <li>Authenticate your account and keep it secure.</li>
+                <li>Display spending summaries, breakdowns, and history within the app.</li>
+                <li>Communicate service updates or important account notices.</li>
+            </ul>
+            <p style="color: var(--ink-muted); line-height: 1.8; font-size: 0.95rem; margin-top: 0.75rem;">We do not use your data for advertising, profiling, or any automated decision-making.</p>
+        </div>
+
+        <div>
+            <h2 style="font-family: var(--font-display); font-size: 1.4rem; color: var(--ink); margin-bottom: 0.75rem;">3. Data Storage</h2>
+            <p style="color: var(--ink-muted); line-height: 1.8; font-size: 0.95rem;">Your data is stored in a secured database accessible only to you and authorised system processes. Passwords are never stored in plain text — we use industry-standard hashing before any credential is saved. You may request full deletion of your account and all associated data at any time.</p>
+        </div>
+
+        <div>
+            <h2 style="font-family: var(--font-display); font-size: 1.4rem; color: var(--ink); margin-bottom: 0.75rem;">4. Third Party Services</h2>
+            <p style="color: var(--ink-muted); line-height: 1.8; font-size: 0.95rem;">Spendly does not sell, rent, or share your personal data with third parties. We use Google Fonts to load typefaces — this results in a request to Google's servers when you visit the app. No expense or account data is transmitted to any external service.</p>
+        </div>
+
+        <div>
+            <h2 style="font-family: var(--font-display); font-size: 1.4rem; color: var(--ink); margin-bottom: 0.75rem;">5. Contact Us</h2>
+            <p style="color: var(--ink-muted); line-height: 1.8; font-size: 0.95rem;">If you have questions or concerns about this Privacy Policy, or would like to request access to or deletion of your data, please reach out through the app's support channel. We aim to respond within 5 business days.</p>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
