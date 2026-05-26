@@ -27,13 +27,15 @@ pytest -k "test_login"
 
 ### Request flow
 
-1. [app.py](app.py) — all Flask routes live here. Only `GET /`, `GET /register`, and `GET /login` are wired up; they render templates but have no POST handling yet. All other routes return placeholder strings (`"coming in Step X"`).
+1. [app.py](app.py) — all Flask routes live here. Only `GET /`, `/register`, `/login`, `/terms`, and `/privacy` are wired up; they render templates but have no POST handling yet. All other routes return placeholder strings (`"coming in Step X"`).
 2. [database/db.py](database/db.py) — **currently empty**. Three functions must be implemented here:
    - `get_db()` — returns a SQLite connection with `row_factory = sqlite3.Row` and `PRAGMA foreign_keys = ON`
    - `init_db()` — creates tables using `CREATE TABLE IF NOT EXISTS`
    - `seed_db()` — inserts sample rows for development
 3. Templates use Jinja2 inheritance: [templates/base.html](templates/base.html) defines navbar/footer/script blocks; all pages `{% extends "base.html" %}`.
 4. Auth forms (`register.html`, `login.html`) POST to `/register` and `/login` and display `{{ error }}` when that template variable is set.
+5. CSS is split: `static/css/style.css` holds global styles shared via `base.html`; page-specific stylesheets (e.g. `landing.css`) are injected via `{% block head %}`.
+6. No JS framework — all client-side code is vanilla JS, added via `{% block scripts %}`.
 
 ### Expected database schema
 
